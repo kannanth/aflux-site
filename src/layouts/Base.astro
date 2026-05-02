@@ -1,0 +1,60 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "AfLux — your local-first tax & financial advisor. Private, encrypted, AI-powered." } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <style>
+    :root {
+      --color-bg: #fafafa;
+      --color-text: #171717;
+      --color-muted: #737373;
+      --color-accent: #2563eb;
+      --color-accent-light: #dbeafe;
+      --color-border: #e5e5e5;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    a { color: var(--color-accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header style="border-bottom: 1px solid var(--color-border); background: white; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;">
+    <a href="/" style="font-size: 1.25rem; font-weight: 700; color: var(--color-text); text-decoration: none;">AfLux</a>
+    <nav style="display: flex; gap: 1.5rem; font-size: 0.875rem;">
+      <a href="/features">Features</a>
+      <a href="/download">Download</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/blog">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer style="border-top: 1px solid var(--color-border); padding: 2rem; text-align: center; font-size: 0.75rem; color: var(--color-muted);">
+    <p>&copy; 2026 AfLux. Your data stays on your device. Always.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="/privacy">Privacy</a> &middot;
+      <a href="/terms">Terms</a> &middot;
+      <a href="mailto:hello@aflux.app">Contact</a>
+    </p>
+  </footer>
+</body>
+</html>

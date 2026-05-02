@@ -1,0 +1,47 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Download AfLux">
+  <style>
+    .dl-page { max-width: 700px; margin: 0 auto; padding: 4rem 2rem; }
+    .dl-page h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-page .subtitle { color: #525252; margin-bottom: 2.5rem; }
+    .dl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    .dl-card { background: white; border: 1px solid #e5e5e5; border-radius: 0.75rem; padding: 2rem; text-align: center; }
+    .dl-card h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .dl-card p { font-size: 0.8rem; color: #737373; margin-bottom: 1.25rem; }
+    .dl-card .btn { display: inline-block; background: #171717; color: white; padding: 0.6rem 1.5rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 600; text-decoration: none; }
+    .dl-card .btn:hover { background: #404040; text-decoration: none; }
+    .req { background: #f5f5f5; border-radius: 0.5rem; padding: 1.5rem; font-size: 0.8rem; color: #525252; }
+    .req h3 { font-size: 0.875rem; font-weight: 600; color: #171717; margin-bottom: 0.5rem; }
+    .req ul { padding-left: 1.25rem; }
+    .req li { margin-bottom: 0.25rem; }
+  </style>
+
+  <div class="dl-page">
+    <h1>Download AfLux</h1>
+    <p class="subtitle">Free. No account required. Your data never leaves your device.</p>
+
+    <div class="dl-grid">
+      <div class="dl-card">
+        <h2>macOS</h2>
+        <p>Apple Silicon &amp; Intel<br/>macOS 12+</p>
+        <a href="https://github.com/YOUR_USERNAME/taxpal/releases/latest" class="btn">Download .dmg</a>
+      </div>
+      <div class="dl-card">
+        <h2>Windows</h2>
+        <p>Windows 10/11<br/>x64</p>
+        <a href="https://github.com/YOUR_USERNAME/taxpal/releases/latest" class="btn">Download .msi</a>
+      </div>
+    </div>
+
+    <div class="req">
+      <h3>Requirements</h3>
+      <ul>
+        <li><strong>Ollama</strong> — required for AI features (Ask Lux). <a href="https://ollama.com/download">Download Ollama</a> and pull a model (e.g. <code>ollama pull qwen2.5:7b</code>).</li>
+        <li><strong>Disk space</strong> — ~200 MB for the app + ~4 GB for the AI model.</li>
+        <li><strong>No internet required</strong> after initial setup. Everything runs locally.</li>
+      </ul>
+    </div>
+  </div>
+</Base>

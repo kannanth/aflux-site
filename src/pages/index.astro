@@ -1,0 +1,66 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="AfLux — Local-First Tax & Financial Advisor">
+  <style>
+    .hero { text-align: center; padding: 5rem 2rem 4rem; max-width: 800px; margin: 0 auto; }
+    .hero h1 { font-size: 2.75rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.25rem; }
+    .hero p { font-size: 1.125rem; color: #525252; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.15s; }
+    .btn-primary { background: #171717; color: white; }
+    .btn-primary:hover { background: #404040; text-decoration: none; }
+    .btn-secondary { background: white; color: #171717; border: 1px solid #d4d4d4; }
+    .btn-secondary:hover { border-color: #a3a3a3; text-decoration: none; }
+    .badge { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 2rem; margin-bottom: 1.5rem; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; padding: 0 2rem 5rem; }
+    .feature-card { background: white; border: 1px solid #e5e5e5; border-radius: 0.75rem; padding: 1.5rem; }
+    .feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .feature-card p { font-size: 0.875rem; color: #525252; }
+    .privacy-banner { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 2rem; max-width: 700px; margin: 0 auto 4rem; text-align: center; }
+    .privacy-banner h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+    .privacy-banner p { font-size: 0.875rem; color: #1e40af; }
+  </style>
+
+  <section class="hero">
+    <span class="badge">100% Local &middot; Zero Cloud</span>
+    <h1>Your finances. Your device.<br/>Your eyes only.</h1>
+    <p>AfLux is a desktop financial advisor that runs entirely on your machine. AI-powered tax planning, cash flow analysis, rental management, and retirement projections &mdash; with military-grade encryption and zero data leaving your device.</p>
+    <div class="hero-buttons">
+      <a href="/download" class="btn btn-primary">Download Free</a>
+      <a href="/features" class="btn btn-secondary">See Features</a>
+    </div>
+  </section>
+
+  <div class="privacy-banner">
+    <h2>Privacy is not a feature. It's the architecture.</h2>
+    <p>No accounts. No cloud sync. No telemetry. Your data is encrypted with SQLCipher using your passphrase &mdash; even we can't see it. The AI runs locally via Ollama. Nothing ever leaves your machine.</p>
+  </div>
+
+  <section class="features">
+    <div class="feature-card">
+      <h3>Cash Flow Intelligence</h3>
+      <p>Import bank statements (OFX/QFX/CSV). Auto-categorize with vendor learning. Spending charts, subscription detection, and wasteful spending analysis.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Tax Planning</h3>
+      <p>Ingest prior-year returns and W-2s/1099s. Year-over-year comparison. Estimated payment tracking. Year-end tax move recommendations powered by local AI.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Rental Management</h3>
+      <p>Full Schedule E tracking: expenses by IRS line, rental income, tenant ledger, depreciation schedules. Dedicated rental cash flow with separate bank imports.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Net Worth &amp; Portfolio</h3>
+      <p>Track all accounts (retirement, brokerage, real estate, personal items). Live stock quotes. Tax lot tracking with cost basis and unrealized gains.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Retirement Projections</h3>
+      <p>Monte Carlo simulations. Roth vs Traditional analysis. RMD schedules. "When can I retire?" solver with customizable scenarios and budget modeling.</p>
+    </div>
+    <div class="feature-card">
+      <h3>AI Advisor (Ask Lux)</h3>
+      <p>Chat with a local LLM grounded in your actual financial data. Smart Prompts for complex scenarios: tax-loss harvesting, Roth conversions, rental optimization.</p>
+    </div>
+  </section>
+</Base>

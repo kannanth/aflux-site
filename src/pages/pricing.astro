@@ -1,0 +1,73 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Pricing — AfLux">
+  <style>
+    .page { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+    .page h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .page .subtitle { color: #525252; margin-bottom: 3rem; }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; text-align: left; }
+    .tier { background: white; border: 1px solid #e5e5e5; border-radius: 0.75rem; padding: 2rem; display: flex; flex-direction: column; }
+    .tier.featured { border-color: #2563eb; box-shadow: 0 0 0 1px #2563eb; }
+    .tier h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .tier .price { font-size: 2rem; font-weight: 700; margin: 0.75rem 0; }
+    .tier .price span { font-size: 0.875rem; font-weight: 400; color: #737373; }
+    .tier .desc { font-size: 0.8rem; color: #737373; margin-bottom: 1.25rem; }
+    .tier ul { padding-left: 1.1rem; font-size: 0.85rem; color: #404040; flex: 1; }
+    .tier li { margin-bottom: 0.4rem; }
+    .tier .btn { display: block; text-align: center; margin-top: 1.5rem; padding: 0.7rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.875rem; text-decoration: none; }
+    .btn-free { background: #f5f5f5; color: #171717; }
+    .btn-paid { background: #2563eb; color: white; }
+    .btn-paid:hover { background: #1d4ed8; text-decoration: none; }
+  </style>
+
+  <div class="page">
+    <h1>Simple, honest pricing</h1>
+    <p class="subtitle">The app is free forever. Premium Packs unlock expert intelligence.</p>
+
+    <div class="tiers">
+      <div class="tier">
+        <h2>Free</h2>
+        <div class="price">$0 <span>forever</span></div>
+        <p class="desc">Full app with all features. Basic tax knowledge pack included.</p>
+        <ul>
+          <li>All app features (Cash Flow, Tax, Rental, Retirement, Net Worth)</li>
+          <li>OFX/QFX/CSV/PDF import</li>
+          <li>Local AI chat (Ask Lux)</li>
+          <li>Basic tax reference (15 knowledge chunks)</li>
+          <li>Encrypted local storage</li>
+        </ul>
+        <a href="/download" class="btn btn-free">Download Free</a>
+      </div>
+
+      <div class="tier featured">
+        <h2>Premium Pack</h2>
+        <div class="price">$9.99 <span>/month or $79/year</span></div>
+        <p class="desc">Expert intelligence that acts on your data. Updated monthly.</p>
+        <ul>
+          <li>Everything in Free</li>
+          <li>Smart Prompts library (30+ expert scenarios)</li>
+          <li>Monthly action calendar (deadlines, tax moves)</li>
+          <li>Strategy playbooks (Backdoor Roth, 1031, TLH, etc.)</li>
+          <li>IRS alert feed (new rulings, guidance)</li>
+          <li>Benchmark data (how do you compare?)</li>
+          <li>Monthly content updates</li>
+        </ul>
+        <a href="#" class="btn btn-paid">Coming Soon</a>
+      </div>
+
+      <div class="tier">
+        <h2>State Add-On</h2>
+        <div class="price">$4.99 <span>/month</span></div>
+        <p class="desc">State-specific tax rules, deductions, and strategies.</p>
+        <ul>
+          <li>State income tax rules and brackets</li>
+          <li>State-specific deductions and credits</li>
+          <li>Property tax strategies</li>
+          <li>Available: CA, NY, TX, FL (more coming)</li>
+        </ul>
+        <a href="#" class="btn btn-free">Coming Soon</a>
+      </div>
+    </div>
+  </div>
+</Base>
