@@ -1,7 +1,7 @@
 ---
-title: "Introducing AfLux — Your Private Financial Advisor"
+title: "Introducing AfLux — Your Private Financial Co-Pilot"
 date: "2026-05-02"
-excerpt: "AfLux is a desktop app that gives you the power of a financial advisor without giving up your data."
+excerpt: "AfLux is a desktop app that gives you the power of a financial co-pilot without giving up your data."
 ---
 
 ## Why AfLux?
@@ -12,7 +12,7 @@ AfLux takes a different approach: **everything stays on your machine.**
 
 ## What It Does
 
-AfLux combines the features of Mint (cash flow tracking, subscription detection), TurboTax (tax document ingestion, return comparison), and a financial advisor (AI-powered analysis) — all running locally on your Mac or Windows PC.
+AfLux combines the features of Mint (cash flow tracking, subscription detection), TurboTax (tax document ingestion, return comparison), and an AI-powered financial assistant — all running locally on your Mac or Windows PC.
 
 - **Import bank statements** (OFX/QFX/CSV) — no screen scraping, no bank credentials shared
 - **Track rental properties** with full Schedule E expense categorization
