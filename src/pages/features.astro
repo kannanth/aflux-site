@@ -9,6 +9,7 @@ import Base from "../layouts/Base.astro";
     .section h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e5e5e5; }
     .section ul { padding-left: 1.25rem; color: #404040; font-size: 0.9rem; }
     .section li { margin-bottom: 0.4rem; }
+    .new { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.65rem; font-weight: 600; padding: 0.1rem 0.4rem; border-radius: 0.25rem; margin-left: 0.4rem; vertical-align: middle; }
   </style>
 
   <div class="page">
@@ -18,11 +19,14 @@ import Base from "../layouts/Base.astro";
       <h2>Cash Flow</h2>
       <ul>
         <li>Import bank statements: OFX, QFX, CSV, or PDF (AI-extracted)</li>
-        <li>Auto-categorization with vendor rule learning</li>
-        <li>Spending donut chart and monthly income vs expense trends</li>
-        <li>Subscription detection with Keep/Cancel/Review tags</li>
+        <li>Auto-categorization with vendor rule learning — recategorize once, applies to all similar</li>
+        <li>Spending donut chart and monthly income vs expense bar chart</li>
+        <li>Subscription detection with Keep/Cancel/Review tags and annual cost rollup</li>
         <li>Bulk categorization with one-click multi-select</li>
-        <li>Link transactions to rental properties (auto-creates Schedule E expenses)</li>
+        <li>Link transactions to rental properties (auto-creates Schedule E expenses or income)</li>
+        <li>Category budgeting with progress bars and auto-suggest from spending history <span class="new">NEW</span></li>
+        <li>12-month cash flow forecast with recurring transaction detection <span class="new">NEW</span></li>
+        <li>"Safe to spend" indicator based on projected balance <span class="new">NEW</span></li>
       </ul>
     </div>
 
@@ -31,22 +35,27 @@ import Base from "../layouts/Base.astro";
       <ul>
         <li>Ingest Form 1040, W-2, 1099-DIV/INT/B/NEC/MISC, Schedule K-1, Schedule E</li>
         <li>Year-over-year return comparison</li>
-        <li>Federal + state tax estimate calculator</li>
+        <li>Federal tax estimate calculator with bracket breakdown</li>
         <li>Quarterly estimated payment tracker with safe harbor checks</li>
         <li>Prefill tax inputs from imported documents</li>
+        <li>Tax What-If Scenarios — interactive sliders for 401(k), IRA, HSA, Roth conversion, stock gains <span class="new">NEW</span></li>
+        <li>Quick scenarios: "Max out 401(k)", "Harvest $10K losses", "Backdoor Roth" <span class="new">NEW</span></li>
+        <li>Real-time tax savings/cost delta as you adjust inputs <span class="new">NEW</span></li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Rental Management</h2>
       <ul>
-        <li>Dedicated rental cash flow (separate bank accounts)</li>
+        <li>Dedicated rental cash flow with separate bank accounts and import</li>
         <li>Schedule E expense tracking by IRS line item</li>
         <li>Rental income ledger with tenant association</li>
         <li>Tenant management (active, past, pending)</li>
         <li>Depreciation schedules (straight-line, 27.5 yr residential)</li>
         <li>Improvements tracking and basis adjustments</li>
+        <li>Add and edit rental properties directly from Rental Management</li>
         <li>CSV export for tax preparer</li>
+        <li>Budget and forecast tabs scoped to rental accounts <span class="new">NEW</span></li>
       </ul>
     </div>
 
@@ -58,6 +67,9 @@ import Base from "../layouts/Base.astro";
         <li>Tax lot tracking with cost basis and unrealized gains</li>
         <li>Holdings import from brokerage PDFs and CSVs</li>
         <li>Personal items with photo documentation and valuation history</li>
+        <li>Investment Fee Analyzer — expense ratios, annual fees, 10/30-year fee drag projections <span class="new">NEW</span></li>
+        <li>Asset Allocation — compare your allocation to model portfolios (Boglehead, Target Date, etc.) <span class="new">NEW</span></li>
+        <li>Rebalancing guidance: see exactly where to add or reduce <span class="new">NEW</span></li>
       </ul>
     </div>
 
@@ -77,10 +89,20 @@ import Base from "../layouts/Base.astro";
       <h2>AI Assistant (Ask Lux)</h2>
       <ul>
         <li>Local LLM chat (Ollama) grounded in your actual financial data</li>
-        <li>Smart Prompts library for complex tax scenarios</li>
-        <li>RAG retrieval from curated tax-code knowledge packs</li>
-        <li>Citations linking answers to source data</li>
-        <li>Background processing — navigate away while Lux thinks</li>
+        <li>Smart Prompts library — one-click expert scenarios for tax, portfolio, rental, retirement <span class="new">NEW</span></li>
+        <li>RAG retrieval from curated tax-code PowerPack</li>
+        <li>Lux sees your cash flow, portfolio, properties, and tax data in context <span class="new">NEW</span></li>
+        <li>Background processing — navigate away while Lux thinks, badge notification when ready</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>PowerPack</h2>
+      <ul>
+        <li>Free PowerPack: 140+ fund expense ratios, 10 Smart Prompts, 5 model portfolios, tax knowledge</li>
+        <li>Premium PowerPack (coming soon): 2,000+ funds, 50+ prompts, state tax rules, monthly updates</li>
+        <li>Fund fee database powers the Fee Analyzer and Allocation features</li>
+        <li>Model portfolios delivered as pack content — updated with new strategies over time</li>
       </ul>
     </div>
 
@@ -93,6 +115,7 @@ import Base from "../layouts/Base.astro";
         <li>No telemetry, analytics, or crash reporting</li>
         <li>No accounts, no cloud, no sign-up</li>
         <li>Database backup and full data deletion from Settings</li>
+        <li>Demo mode — explore the app with sample data, your real vault untouched <span class="new">NEW</span></li>
       </ul>
     </div>
   </div>
