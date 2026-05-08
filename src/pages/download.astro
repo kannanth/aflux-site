@@ -42,17 +42,6 @@ import Base from "../layouts/Base.astro";
       </div>
     </div>
 
-    <div class="install-note mac-note">
-      <h3>macOS: "App is damaged" message?</h3>
-      <p>macOS blocks apps that aren't signed with an Apple Developer certificate. AfLux is safe — it runs entirely on your device with no network calls. To fix:</p>
-      <ol>
-        <li>Open <strong>Terminal</strong> (search "Terminal" in Spotlight)</li>
-        <li>Run: <code>xattr -cr /Applications/AfLux.app</code></li>
-        <li>Open AfLux normally</li>
-      </ol>
-      <p style="margin-top: 0.5rem;">Alternatively: right-click the app → Open → click "Open" in the dialog.</p>
-    </div>
-
     <div class="install-note win-note">
       <h3>Windows: SmartScreen warning?</h3>
       <p>Windows may show "Windows protected your PC" since the app isn't code-signed. Click <strong>"More info"</strong> → <strong>"Run anyway"</strong>. This only happens on first launch.</p>
