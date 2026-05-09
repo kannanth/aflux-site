@@ -21,7 +21,7 @@ AfLux combines the features of Mint (cash flow tracking, subscription detection)
 
 ## How Privacy Works
 
-Your data is encrypted with SQLCipher (AES-256) using a passphrase only you know. The AI runs locally via Ollama — no API keys, no cloud calls. We literally cannot see your data because it never leaves your device.
+Your data is encrypted with SQLCipher (AES-256) using a passphrase only you know. The AI runs locally on your device — no API keys, no cloud calls. We literally cannot see your data because it never leaves your machine.
 
 ## Get Started
 
