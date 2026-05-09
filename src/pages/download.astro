@@ -43,8 +43,11 @@ import Base from "../layouts/Base.astro";
     </div>
 
     <div class="install-note win-note">
-      <h3>Windows: SmartScreen warning?</h3>
-      <p>Windows may show "Windows protected your PC" since the app isn't code-signed. Click <strong>"More info"</strong> → <strong>"Run anyway"</strong>. This only happens on first launch.</p>
+      <h3>Windows: First-time setup</h3>
+      <ol>
+        <li>If you see "Windows protected your PC" — click <strong>"More info"</strong> → <strong>"Run anyway"</strong></li>
+        <li>If you see "MSVCP140_1.dll not found" — install the <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ Redistributable</a> (free, one-time)</li>
+      </ol>
     </div>
 
     <div class="req">
