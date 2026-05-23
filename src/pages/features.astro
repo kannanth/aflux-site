@@ -34,13 +34,15 @@ import Base from "../layouts/Base.astro";
       <h2>Tax Planning</h2>
       <ul>
         <li>Ingest Form 1040, W-2, 1099-DIV/INT/B/NEC/MISC, Schedule K-1, Schedule E</li>
+        <li>Schedule E extraction: rental properties, S-Corp/partnership income, entity details <span class="new">NEW</span></li>
         <li>Year-over-year return comparison</li>
         <li>Federal tax estimate calculator with bracket breakdown</li>
+        <li>State tax calculation with 28 state brackets</li>
         <li>Quarterly estimated payment tracker with safe harbor checks</li>
         <li>Prefill tax inputs from imported documents</li>
-        <li>Tax What-If Scenarios — interactive sliders for 401(k), IRA, HSA, Roth conversion, stock gains <span class="new">NEW</span></li>
-        <li>Quick scenarios: "Max out 401(k)", "Harvest $10K losses", "Backdoor Roth" <span class="new">NEW</span></li>
-        <li>Real-time tax savings/cost delta as you adjust inputs <span class="new">NEW</span></li>
+        <li>Tax What-If Scenarios — interactive sliders for 401(k), IRA, HSA, Roth conversion, stock gains</li>
+        <li>Quick scenarios: "Max out 401(k)", "Harvest $10K losses", "Backdoor Roth"</li>
+        <li>Real-time tax savings/cost delta as you adjust inputs</li>
       </ul>
     </div>
 
@@ -51,11 +53,12 @@ import Base from "../layouts/Base.astro";
         <li>Schedule E expense tracking by IRS line item</li>
         <li>Rental income ledger with tenant association</li>
         <li>Tenant management (active, past, pending)</li>
+        <li>Lease document upload per tenant — stored in document vault <span class="new">NEW</span></li>
         <li>Depreciation schedules (straight-line, 27.5 yr residential)</li>
         <li>Improvements tracking and basis adjustments</li>
         <li>Add and edit rental properties directly from Rental Management</li>
         <li>CSV export for tax preparer</li>
-        <li>Budget and forecast tabs scoped to rental accounts <span class="new">NEW</span></li>
+        <li>Budget and forecast tabs scoped to rental accounts</li>
       </ul>
     </div>
 
@@ -76,10 +79,12 @@ import Base from "../layouts/Base.astro";
     <div class="section">
       <h2>Retirement Planning</h2>
       <ul>
+        <li>Contribution Optimizer — priority waterfall across 401(k), HSA, Roth IRA, Traditional IRA with tax savings per step <span class="new">NEW</span></li>
+        <li>MAGI phase-out awareness for Roth IRA and Traditional IRA deductibility <span class="new">NEW</span></li>
         <li>Retirement readiness projection ("When can I retire?")</li>
-        <li>Monte Carlo scenario comparison</li>
         <li>Roth vs Traditional contribution analysis</li>
         <li>Required Minimum Distribution (RMD) schedule</li>
+        <li>What-If scenario comparison</li>
         <li>Budget modeling with category breakdown</li>
         <li>Pre-retirement financial commitments (college, eldercare)</li>
       </ul>
@@ -89,9 +94,10 @@ import Base from "../layouts/Base.astro";
       <h2>AI Assistant (Ask Lux)</h2>
       <ul>
         <li>Local AI chat grounded in your actual financial data — runs entirely on your device</li>
-        <li>Smart Prompts library — one-click expert scenarios for tax, portfolio, rental, retirement <span class="new">NEW</span></li>
+        <li>Tool-calling architecture — Lux picks the right data lookup (net worth, spending, holdings, fees, tenants, etc.) and returns precise answers <span class="new">NEW</span></li>
+        <li>Smart Prompts library — one-click expert scenarios for tax, portfolio, rental, retirement</li>
         <li>RAG retrieval from curated tax-code PowerPack</li>
-        <li>Lux sees your cash flow, portfolio, properties, and tax data in context <span class="new">NEW</span></li>
+        <li>Lux sees your cash flow, portfolio, properties, and tax data in context</li>
         <li>Background processing — navigate away while Lux thinks, badge notification when ready</li>
       </ul>
     </div>
@@ -107,15 +113,28 @@ import Base from "../layouts/Base.astro";
     </div>
 
     <div class="section">
+      <h2>Document Vault</h2>
+      <ul>
+        <li>Store reference files — leases, insurance policies, mortgage docs, deeds, tax returns <span class="new">NEW</span></li>
+        <li>Organized by category with labels and notes</li>
+        <li>Open with system default app (Preview, Word, etc.)</li>
+        <li>Link documents to rental properties</li>
+      </ul>
+    </div>
+
+    <div class="section">
       <h2>Security &amp; Privacy</h2>
       <ul>
         <li>SQLCipher encrypted database (AES-256)</li>
         <li>Argon2id key derivation from your passphrase</li>
-        <li>Zero network calls except optional stock quotes</li>
+        <li>Zero network calls except optional stock quotes and PowerPack updates</li>
         <li>No telemetry, analytics, or crash reporting</li>
         <li>No accounts, no cloud, no sign-up</li>
-        <li>Database backup and full data deletion from Settings</li>
-        <li>Demo mode — explore the app with sample data, your real vault untouched <span class="new">NEW</span></li>
+        <li>Full encrypted backup — single .aflux-backup file with AES-256 password protection <span class="new">NEW</span></li>
+        <li>Restore from backup on the unlock screen <span class="new">NEW</span></li>
+        <li>Passphrase hint (optional, stored locally) <span class="new">NEW</span></li>
+        <li>Vault reset with DELETE confirmation for forgotten passphrase</li>
+        <li>Demo mode — explore the app with sample data, your real vault untouched</li>
       </ul>
     </div>
   </div>
