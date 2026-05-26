@@ -1,0 +1,60 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Privacy Policy — AfLux">
+  <style>
+    .page { max-width: 700px; margin: 0 auto; padding: 4rem 2rem; }
+    .page h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .page .updated { font-size: 0.85rem; color: #737373; margin-bottom: 2.5rem; }
+    .page h2 { font-size: 1.15rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.5rem; }
+    .page p, .page li { font-size: 0.9rem; color: #404040; line-height: 1.7; }
+    .page ul { padding-left: 1.25rem; }
+    .page li { margin-bottom: 0.3rem; }
+  </style>
+
+  <div class="page">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: May 26, 2026</p>
+
+    <h2>Our Commitment</h2>
+    <p>AfLux is built on a simple principle: your financial data belongs to you. We designed the app from the ground up so that your data never leaves your device unless you explicitly choose to sync it via your own iCloud Drive.</p>
+
+    <h2>Data Collection</h2>
+    <p>AfLux does not collect, transmit, or store any user data on our servers. Specifically:</p>
+    <ul>
+      <li>No analytics or telemetry</li>
+      <li>No crash reporting</li>
+      <li>No user accounts or registration</li>
+      <li>No cookies or tracking</li>
+      <li>No advertising</li>
+      <li>No third-party SDKs that collect data</li>
+    </ul>
+
+    <h2>On-Device Storage</h2>
+    <p>All your financial data — tax returns, transactions, portfolio holdings, rental property records, and documents — is stored locally on your device in an encrypted SQLCipher database. The database is protected by a passphrase you choose, using Argon2id key derivation and AES-256 encryption.</p>
+    <p>We do not have access to your passphrase. If you lose it, your data cannot be recovered — by you, by us, or by anyone.</p>
+
+    <h2>iCloud Sync</h2>
+    <p>AfLux offers an optional iCloud sync feature that stores your encrypted vault in your personal iCloud Drive. This sync is between your own devices using your own Apple ID. AfLux does not operate any cloud infrastructure for data storage or sync. We never access, read, or process data stored in your iCloud Drive.</p>
+
+    <h2>AI Assistant</h2>
+    <p>The Ask Lux AI assistant uses Apple Intelligence (Foundation Models) on iOS and macOS, which runs entirely on your device. On Windows and older macOS versions, it uses an in-process language model (Phi-3) that also runs locally. No queries or responses are sent to any server.</p>
+
+    <h2>Network Connections</h2>
+    <p>AfLux makes the following optional network connections:</p>
+    <ul>
+      <li><strong>Stock quotes</strong> — delayed price data from Yahoo Finance to refresh portfolio values. Only ticker symbols are sent; no personal or account data.</li>
+      <li><strong>PowerPack updates</strong> — checks our server (api.aflux.app) for updated tax-code content packs. No personal data is transmitted.</li>
+    </ul>
+    <p>All other functionality works completely offline.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>AfLux is not directed at children under 13. We do not knowingly collect any information from children.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we change this privacy policy, we will update the "Last updated" date above. Since AfLux does not collect any user data, we have no way to notify you directly — please check this page periodically.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy, contact us at <strong>privacy@aflux.app</strong>.</p>
+  </div>
+</Base>
