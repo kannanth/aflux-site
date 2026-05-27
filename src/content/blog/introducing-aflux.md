@@ -6,13 +6,13 @@ excerpt: "AfLux is a desktop app that gives you the power of a financial co-pilo
 
 ## Why AfLux?
 
-Every financial tool today wants your data in their cloud. Mint did it. Rocket Money does it. Even your bank's "budgeting" feature uploads everything to their servers.
+Every financial tool today wants your data in their cloud. Monarch Money, Copilot, Rocket Money — they all store your complete financial history on their servers. Even your bank's "budgeting" feature uploads everything to their infrastructure.
 
 AfLux takes a different approach: **everything stays on your machine.**
 
 ## What It Does
 
-AfLux combines the features of Mint (cash flow tracking, subscription detection), TurboTax (tax document ingestion, return comparison), and an AI-powered financial assistant — all running locally on your Mac or Windows PC.
+AfLux combines cash flow tracking, tax document ingestion, portfolio analysis, rental management, and an AI-powered financial assistant — all running locally on your Mac, Windows PC, or iPhone.
 
 - **Import bank statements** (OFX/QFX/CSV) — no screen scraping, no bank credentials shared
 - **Track rental properties** with full Schedule E expense categorization
