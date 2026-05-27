@@ -5,8 +5,8 @@ import Base from "../layouts/Base.astro";
   <style>
     .page { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
     .page h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .page .subtitle { color: #525252; margin-bottom: 3rem; }
-    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; text-align: left; }
+    .page .subtitle { color: #525252; margin-bottom: 3rem; font-size: 1.05rem; }
+    .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; text-align: left; margin-bottom: 3rem; }
     .tier { background: white; border: 1px solid #e5e5e5; border-radius: 0.75rem; padding: 2rem; display: flex; flex-direction: column; }
     .tier.featured { border-color: #2563eb; box-shadow: 0 0 0 1px #2563eb; }
     .tier h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem; }
@@ -15,59 +15,168 @@ import Base from "../layouts/Base.astro";
     .tier .desc { font-size: 0.8rem; color: #737373; margin-bottom: 1.25rem; }
     .tier ul { padding-left: 1.1rem; font-size: 0.85rem; color: #404040; flex: 1; }
     .tier li { margin-bottom: 0.4rem; }
-    .tier .btn { display: block; text-align: center; margin-top: 1.5rem; padding: 0.7rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.875rem; text-decoration: none; }
+    .tier .btn { display: block; text-align: center; margin-top: 1.5rem; padding: 0.7rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: all 0.15s; }
     .btn-free { background: #f5f5f5; color: #171717; }
+    .btn-free:hover { background: #e5e5e5; text-decoration: none; }
     .btn-paid { background: #2563eb; color: white; }
     .btn-paid:hover { background: #1d4ed8; text-decoration: none; }
+
+    .support-section { max-width: 600px; margin: 0 auto 3rem; padding: 2.5rem; background: #fefce8; border: 1px solid #fde68a; border-radius: 1rem; }
+    .support-section h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .support-section p { font-size: 0.9rem; color: #525252; margin-bottom: 1.5rem; }
+    .support-amounts { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    .support-amounts a {
+      display: inline-block; padding: 0.6rem 1.25rem; border-radius: 0.5rem;
+      font-weight: 600; font-size: 0.9rem; text-decoration: none;
+      background: white; border: 1px solid #d4d4d4; color: #171717;
+      transition: all 0.15s;
+    }
+    .support-amounts a:hover { border-color: #2563eb; color: #2563eb; text-decoration: none; }
+    .support-amounts a.highlight { background: #2563eb; color: white; border-color: #2563eb; }
+    .support-amounts a.highlight:hover { background: #1d4ed8; }
+    .support-note { font-size: 0.75rem; color: #a3a3a3; }
+
+    .compare { max-width: 700px; margin: 0 auto; text-align: left; }
+    .compare h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; text-align: center; }
+    .compare table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .compare th { text-align: left; padding: 0.5rem; border-bottom: 2px solid #e5e5e5; font-weight: 600; }
+    .compare td { padding: 0.5rem; border-bottom: 1px solid #f5f5f5; }
+    .compare .check { color: #16a34a; }
+    .compare .cross { color: #d4d4d4; }
+    .compare .aflux-col { background: #eff6ff; font-weight: 600; }
   </style>
 
   <div class="page">
     <h1>Simple, honest pricing</h1>
-    <p class="subtitle">The app is free forever. Premium Packs unlock expert intelligence.</p>
+    <p class="subtitle">AfLux is free. No subscriptions, no accounts, no strings attached.</p>
 
     <div class="tiers">
       <div class="tier">
-        <h2>Free</h2>
+        <h2>AfLux</h2>
         <div class="price">$0 <span>forever</span></div>
-        <p class="desc">Full app with all features. Basic tax knowledge pack included.</p>
+        <p class="desc">The full app — desktop and iOS. No trial, no limits.</p>
         <ul>
-          <li>All app features (Cash Flow, Tax, Rental, Retirement, Net Worth)</li>
-          <li>OFX/QFX/CSV/PDF import</li>
-          <li>Local AI chat (Ask Lux)</li>
-          <li>Basic tax reference (15 knowledge chunks)</li>
-          <li>Encrypted local storage</li>
+          <li>Cash flow tracking with OFX/QFX/CSV import</li>
+          <li>Portfolio with live quotes and fee analyzer</li>
+          <li>Rental management with Schedule E tracking</li>
+          <li>Retirement optimizer and Roth analysis</li>
+          <li>Tax document ingestion (1040, W-2, 1099, K-1)</li>
+          <li>Ask Lux AI assistant (on-device)</li>
+          <li>Receipt scanning (iOS camera + Vision OCR)</li>
+          <li>SQLCipher AES-256 encrypted vault</li>
+          <li>iCloud sync between Mac and iPhone</li>
         </ul>
         <a href="/download" class="btn btn-free">Download Free</a>
       </div>
 
       <div class="tier featured">
-        <h2>Premium Pack</h2>
-        <div class="price">$9.99 <span>/month or $79/year</span></div>
-        <p class="desc">Expert intelligence that acts on your data. Updated monthly.</p>
+        <h2>PowerPack</h2>
+        <div class="price">$29 <span>/year</span></div>
+        <p class="desc">Premium intelligence that pays for itself in the first insight.</p>
         <ul>
           <li>Everything in Free</li>
-          <li>Smart Prompts library (30+ expert scenarios)</li>
-          <li>Monthly action calendar (deadlines, tax moves)</li>
-          <li>Strategy playbooks (Backdoor Roth, 1031, TLH, etc.)</li>
-          <li>IRS alert feed (new rulings, guidance)</li>
-          <li>Benchmark data (how do you compare?)</li>
+          <li>Retirement contribution optimizer with tax savings</li>
+          <li>Fund fee analyzer with 2,000+ funds + alternatives</li>
+          <li>State tax calculations (28 states)</li>
+          <li>Tax what-if scenarios (interactive sliders)</li>
+          <li>50+ Smart Prompts for tax, portfolio, rental</li>
+          <li>Model portfolio comparison and rebalancing</li>
+          <li>Cross-document validation</li>
           <li>Monthly content updates</li>
         </ul>
         <a href="#" class="btn btn-paid">Coming Soon</a>
       </div>
+    </div>
 
-      <div class="tier">
-        <h2>State Add-On</h2>
-        <div class="price">$4.99 <span>/month</span></div>
-        <p class="desc">State-specific tax rules, deductions, and strategies.</p>
-        <ul>
-          <li>State income tax rules and brackets</li>
-          <li>State-specific deductions and credits</li>
-          <li>Property tax strategies</li>
-          <li>Available: CA, NY, TX, FL (more coming)</li>
-        </ul>
-        <a href="#" class="btn btn-free">Coming Soon</a>
+    <!-- Pay What You Want -->
+    <div class="support-section">
+      <h2>Support AfLux</h2>
+      <p>
+        AfLux is built by an independent developer, not a VC-funded startup.
+        If the app saves you money or time, consider paying what it's worth to you.
+        Every contribution goes directly toward development and keeping AfLux ad-free.
+      </p>
+      <div class="support-amounts">
+        <a href="https://buy.stripe.com/PLACEHOLDER_10">$10</a>
+        <a href="https://buy.stripe.com/PLACEHOLDER_25" class="highlight">$25</a>
+        <a href="https://buy.stripe.com/PLACEHOLDER_50">$50</a>
+        <a href="https://buy.stripe.com/PLACEHOLDER_CUSTOM">Custom</a>
       </div>
+      <p class="support-note">One-time. No account required. Processed securely via Stripe.</p>
+    </div>
+
+    <!-- Comparison table -->
+    <div class="compare">
+      <h2>How AfLux compares</h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="aflux-col">AfLux</th>
+            <th>Monarch</th>
+            <th>Copilot</th>
+            <th>YNAB</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Annual cost</td>
+            <td class="aflux-col">Free</td>
+            <td>$180</td>
+            <td>$156</td>
+            <td>$109</td>
+          </tr>
+          <tr>
+            <td>Data stored on</td>
+            <td class="aflux-col">Your device</td>
+            <td>Their cloud</td>
+            <td>Their cloud</td>
+            <td>Their cloud</td>
+          </tr>
+          <tr>
+            <td>AI assistant</td>
+            <td class="aflux-col"><span class="check">&#10003;</span> On-device</td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Tax document import</td>
+            <td class="aflux-col"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Rental properties</td>
+            <td class="aflux-col"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Retirement optimizer</td>
+            <td class="aflux-col"><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Receipt scanning</td>
+            <td class="aflux-col"><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+            <td><span class="cross">&#10007;</span></td>
+          </tr>
+          <tr>
+            <td>Encryption</td>
+            <td class="aflux-col"><span class="check">&#10003;</span> AES-256</td>
+            <td>TLS only</td>
+            <td>TLS only</td>
+            <td>TLS only</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </Base>
