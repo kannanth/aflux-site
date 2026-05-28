@@ -21,21 +21,6 @@ import Base from "../layouts/Base.astro";
     .btn-paid { background: #2563eb; color: white; }
     .btn-paid:hover { background: #1d4ed8; text-decoration: none; }
 
-    .support-section { max-width: 600px; margin: 0 auto 3rem; padding: 2.5rem; background: #fefce8; border: 1px solid #fde68a; border-radius: 1rem; }
-    .support-section h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .support-section p { font-size: 0.9rem; color: #525252; margin-bottom: 1.5rem; }
-    .support-amounts { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
-    .support-amounts a {
-      display: inline-block; padding: 0.6rem 1.25rem; border-radius: 0.5rem;
-      font-weight: 600; font-size: 0.9rem; text-decoration: none;
-      background: white; border: 1px solid #d4d4d4; color: #171717;
-      transition: all 0.15s;
-    }
-    .support-amounts a:hover { border-color: #2563eb; color: #2563eb; text-decoration: none; }
-    .support-amounts a.highlight { background: #2563eb; color: white; border-color: #2563eb; }
-    .support-amounts a.highlight:hover { background: #1d4ed8; }
-    .support-note { font-size: 0.75rem; color: #a3a3a3; }
-
     .compare { max-width: 700px; margin: 0 auto; text-align: left; }
     .compare h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; text-align: center; }
     .compare table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
@@ -86,23 +71,6 @@ import Base from "../layouts/Base.astro";
         </ul>
         <a href="#" class="btn btn-paid">Coming Soon</a>
       </div>
-    </div>
-
-    <!-- Pay What You Want -->
-    <div class="support-section">
-      <h2>Support AfLux</h2>
-      <p>
-        AfLux is built by an independent developer, not a VC-funded startup.
-        If the app saves you money or time, consider paying what it's worth to you.
-        Every contribution goes directly toward development and keeping AfLux ad-free.
-      </p>
-      <div class="support-amounts">
-        <a href="https://buy.stripe.com/PLACEHOLDER_10">$10</a>
-        <a href="https://buy.stripe.com/PLACEHOLDER_25" class="highlight">$25</a>
-        <a href="https://buy.stripe.com/PLACEHOLDER_50">$50</a>
-        <a href="https://buy.stripe.com/PLACEHOLDER_CUSTOM">Custom</a>
-      </div>
-      <p class="support-note">One-time. No account required. Processed securely via Stripe.</p>
     </div>
 
     <!-- Comparison table -->
