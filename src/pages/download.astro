@@ -6,7 +6,8 @@ import Base from "../layouts/Base.astro";
     .dl-page { max-width: 700px; margin: 0 auto; padding: 4rem 2rem; }
     .dl-page h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
     .dl-page .subtitle { color: #525252; margin-bottom: 2.5rem; }
-    .dl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+    .dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+    @media (max-width: 700px) { .dl-grid { grid-template-columns: 1fr; } }
     .dl-card { background: white; border: 1px solid #e5e5e5; border-radius: 0.75rem; padding: 2rem; text-align: center; }
     .dl-card h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.25rem; }
     .dl-card p { font-size: 0.8rem; color: #737373; margin-bottom: 1.25rem; }
@@ -39,6 +40,11 @@ import Base from "../layouts/Base.astro";
         <h2>Windows</h2>
         <p>Windows 10/11<br/>x64</p>
         <a href="https://api.aflux.app/download/windows" class="btn">Download .msi</a>
+      </div>
+      <div class="dl-card" style="border-color: #2563eb;">
+        <h2>iPhone &amp; iPad</h2>
+        <p>iOS 16+<br/>Apple Intelligence for AI</p>
+        <a href="https://apps.apple.com/app/aflux/id6773178204" class="btn" style="background: #2563eb;">App Store</a>
       </div>
     </div>
 
