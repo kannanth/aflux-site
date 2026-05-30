@@ -1,0 +1,77 @@
+---
+import Base from "../layouts/Base.astro";
+---
+<Base title="Newsletter — AfLux">
+  <style>
+    .page { max-width: 560px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+    .page h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .page .subtitle { color: #525252; margin-bottom: 2rem; font-size: 1rem; }
+    .signup-card { background: white; border: 1px solid #e5e5e5; border-radius: 0.75rem; padding: 2rem; text-align: left; margin-bottom: 2rem; }
+    .signup-card h2 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .signup-card p { font-size: 0.85rem; color: #525252; margin-bottom: 1.25rem; }
+    .signup-card ul { padding-left: 1.25rem; font-size: 0.85rem; color: #404040; margin-bottom: 1.25rem; }
+    .signup-card li { margin-bottom: 0.35rem; }
+    .form-row { display: flex; gap: 0.75rem; }
+    .form-row input { flex: 1; padding: 0.65rem 0.85rem; border: 1px solid #d4d4d4; border-radius: 0.5rem; font-size: 0.9rem; }
+    .form-row input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,0.1); }
+    .form-row button { background: #171717; color: white; padding: 0.65rem 1.25rem; border: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.875rem; cursor: pointer; white-space: nowrap; }
+    .form-row button:hover { background: #404040; }
+    .note { font-size: 0.75rem; color: #a3a3a3; margin-top: 0.75rem; }
+    .success { display: none; background: #dcfce7; border: 1px solid #bbf7d0; border-radius: 0.5rem; padding: 1rem; font-size: 0.9rem; color: #166534; margin-top: 1rem; }
+    .error { display: none; background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.5rem; padding: 1rem; font-size: 0.9rem; color: #991b1b; margin-top: 1rem; }
+  </style>
+
+  <div class="page">
+    <h1>Stay in the loop</h1>
+    <p class="subtitle">Tax tips, product updates, and financial insights — no spam, ever.</p>
+
+    <div class="signup-card">
+      <h2>AfLux Newsletter</h2>
+      <p>A monthly email with actionable financial tips and AfLux updates:</p>
+      <ul>
+        <li>Tax optimization strategies (retirement contributions, Roth conversions)</li>
+        <li>Rental property management tips</li>
+        <li>New feature announcements</li>
+        <li>Fund fee insights and portfolio analysis</li>
+      </ul>
+
+      <form id="signup-form">
+        <div class="form-row">
+          <input type="email" id="email" placeholder="you@example.com" required />
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="note">No spam. Unsubscribe anytime. We don't share your email — ever.</p>
+      </form>
+
+      <div id="success" class="success">You're in! Watch for our first email soon.</div>
+      <div id="error" class="error">Something went wrong. Try again.</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const btn = e.target.querySelector('button');
+      btn.textContent = '...';
+      btn.disabled = true;
+      try {
+        const resp = await fetch('https://api.aflux.app/newsletter/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        if (resp.ok) {
+          document.getElementById('success').style.display = 'block';
+          document.getElementById('signup-form').style.display = 'none';
+        } else {
+          document.getElementById('error').style.display = 'block';
+        }
+      } catch {
+        document.getElementById('error').style.display = 'block';
+      }
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    });
+  </script>
+</Base>
